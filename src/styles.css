@@ -32,3 +32,7 @@
   .toast-warning {
     background-color: #f89406;
   }
+
+  .lead {
+      font-size: 100px;
+  }
