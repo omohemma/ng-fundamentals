@@ -7,13 +7,13 @@ import { Component } from "@angular/core";
   <div>
   <h1>Upcoming Angular Events</h1>
   <hr />
-  <event-thumbnail [event]="event1" (eventClick)="handleEventClicked($event)"></event-thumbnail>
+  <event-thumbnail [event]="eventDetails"></event-thumbnail>
 </div>
   `,
 
 })
 export class EventslistComponent {
-  event1 = {
+  eventDetails = {
     id: 1,
     name: 'Angular Connect',
     date: '9/26/2036',
@@ -26,10 +26,4 @@ export class EventslistComponent {
       country: 'England'
     }
   }
-
-
-  handleEventClicked(data) {
-    alert('Event\'s Name - ' + data);
-  }
-
 }
