@@ -17,9 +17,14 @@ import { EventService } from './shared/event.service';
   `,
 
 })
-export class EventslistComponent {
+export class EventslistComponent implements OnInit {
   events: any[]
+
   constructor(private eventService: EventService) {
-    this.events = this.eventService.getEvents()
+
+  }
+
+  ngOnInit() {
+    this.events = this.eventService.getEvents();
   }
 }
