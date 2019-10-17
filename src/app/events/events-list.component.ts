@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { EventService } from './shared/event.service';
+import { ToastrService } from '../common/toastr.service';
 
 declare let toastr
 @Component({
@@ -20,7 +21,7 @@ declare let toastr
 export class EventslistComponent {
   events: any[]
 
-  constructor(private eventService: EventService) {
+  constructor(private eventService: EventService, private toastr: ToastrService) {
 
   }
 
@@ -29,6 +30,6 @@ export class EventslistComponent {
   }
 
   handleThumbnailCLick(eventName) {
-    toastr.success(eventName);
+    this.toastr.success(eventName);
   }
 }
